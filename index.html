@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#070b14" />
+  <title>فوتسال مرکز تحقیقات سایپا</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section class="welcome-screen" id="welcomeScreen" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle" aria-describedby="welcomeDescription">
+    <div class="welcome-glow welcome-glow-one" aria-hidden="true"></div>
+    <div class="welcome-glow welcome-glow-two" aria-hidden="true"></div>
+    <div class="welcome-card">
+      <div class="welcome-orbit" aria-hidden="true"><span></span></div>
+      <div class="welcome-emblem-wrap">
+        <img class="welcome-emblem" src="images/salon-futsal-emblem.png" alt="نشان سالن فوتسال مرکز تحقیقات سایپا" />
+      </div>
+      <span class="welcome-kicker"><span class="welcome-live-dot"></span> مرکز تحقیقات و نوآوری صنایع خودرو سایپا</span>
+      <h1 id="welcomeTitle">فوتسال<br /><span>مرکز تحقیقات سایپا</span></h1>
+      <p id="welcomeDescription">یارکشی، سانس‌های رزروشده و خاطرات بازی‌ها؛ همه در یک‌جا.</p>
+      <button class="welcome-start" type="button" id="welcomeStartBtn">
+        <span>ورود به اپلیکیشن</span><span class="welcome-arrow" aria-hidden="true">←</span>
+      </button>
+      <span class="welcome-footnote">ترکیب تیم‌ها، با یک شروع هیجان‌انگیز</span>
+    </div>
+    <div class="welcome-corner welcome-corner-top" aria-hidden="true">⚽</div>
+    <div class="welcome-corner welcome-corner-bottom" aria-hidden="true">⚽</div>
+  </section>
+
+  <div class="app">
+    <header class="app-header">
+      <a class="brand" href="#" data-app-section="home" aria-label="بازگشت به صفحهٔ اصلی">
+        <span class="logo" aria-hidden="true">⚽</span>
+        <span class="brand-text">
+            <strong>فوتسال مرکز تحقیقات سایپا</strong>
+            <small>یارکشی · رزروها · آلبوم</small>
+        </span>
+      </a>
+
+      <nav class="section-nav" aria-label="بخش‌های اپلیکیشن">
+        <button type="button" data-app-section="home" class="section-nav-btn">خانه</button>
+        <button type="button" data-app-section="team" class="section-nav-btn">یارکشی</button>
+        <button type="button" data-app-section="reserved" class="section-nav-btn">سالن‌های رزروشده</button>
+        <button type="button" data-app-section="gallery" class="section-nav-btn">آلبوم بازی‌ها</button>
+        <button type="button" data-app-section="ratings" class="section-nav-btn">ارزیابی بازیکنان</button>
+        <button type="button" data-app-section="news" class="section-nav-btn">اخبار و اطلاعیه‌ها</button>
+      </nav>
+
+      <div class="auth-control">
+        <span id="authUserBadge" class="auth-user-badge" hidden></span>
+        <button class="auth-button" type="button" data-auth-open>ورود اعضا</button>
+        <button class="auth-logout" type="button" data-auth-logout hidden>خروج</button>
+      </div>
+
+      <nav class="steps" aria-label="مراحل یارکشی">
+        <button class="step-btn" type="button" data-goto="players"><span class="step-num">۱</span> بازیکنان</button>
+        <span class="step-line" aria-hidden="true"></span>
+        <button class="step-btn" type="button" data-goto="captains"><span class="step-num">۲</span> کاپیتان‌ها</button>
+        <span class="step-line" aria-hidden="true"></span>
+        <button class="step-btn" type="button" data-goto="board"><span class="step-num">۳</span> چیدمان</button>
+      </nav>
+    </header>
+
+    <aside class="news-ticker" id="newsTicker" aria-label="اخبار و اطلاعیه‌های زنده">
+      <div class="news-ticker-brand"><span class="news-live-dot"></span><strong>خبرها</strong></div>
+      <div class="news-ticker-copy" id="newsTickerCopy" aria-live="polite"><small id="newsTickerTitle">اطلاعیه</small><strong id="newsTickerText"></strong></div>
+      <button class="news-ticker-next" type="button" data-news-next aria-label="خبر بعدی">‹</button>
+      <button class="news-ticker-more" type="button" data-app-section="news">همهٔ اخبار</button>
+    </aside>
+
+    <section class="hub-view" id="homeView" aria-labelledby="homeTitle">
+      <div class="hub-hero">
+        <div class="hub-hero-copy">
+          <span class="eyebrow">مرکز تحقیقات و نوآوری صنایع خودرو سایپا</span>
+          <h1 id="homeTitle">قرار بعدی، <span>داخل زمین</span></h1>
+          <p>یارکشی هوشمند را انجام دهید، سانس‌های پیش‌رو را ببینید و لحظه‌های بازی‌های قبلی را مرور کنید.</p>
+          <button class="btn primary" type="button" data-app-section="team">⚽ شروع یارکشی <span aria-hidden="true">←</span></button>
+        </div>
+        <div class="hub-hero-mark" aria-hidden="true"><img src="images/salon-futsal-emblem.png" alt="" /></div>
+        <div class="hub-hero-meta"><span>۴ سانس ثبت‌شده</span><i></i><span>۲ آلبوم بازی</span></div>
+      </div>
+      <div class="hub-section-heading"><div><span class="eyebrow">دسترسی سریع</span><h2>کجا می‌خواهید بروید؟</h2></div></div>
+      <div class="hub-cards">
+        <button class="hub-card hub-card-team" type="button" data-app-section="team">
+          <span class="hub-card-icon">⚽</span><span class="hub-card-copy"><strong>یارکشی تیم‌ها</strong><small>بازیکن‌ها را انتخاب کنید و تیم‌های متوازن بسازید</small></span><span class="hub-card-arrow">←</span>
+        </button>
+        <button class="hub-card hub-card-reserved" type="button" data-app-section="reserved">
+          <span class="hub-card-icon">📍</span><span class="hub-card-copy"><strong>سالن‌های رزروشده</strong><small>برنامهٔ سانس‌های برگزارشده و پیش‌رو</small></span><span class="hub-card-arrow">←</span>
+        </button>
+        <button class="hub-card hub-card-gallery" type="button" data-app-section="gallery">
+          <span class="hub-card-icon">🎞️</span><span class="hub-card-copy"><strong>آلبوم فیلم و تصاویر</strong><small>خاطرات تصویری دو سانس برگزارشده</small></span><span class="hub-card-arrow">←</span>
+        </button>
+        <button class="hub-card hub-card-ratings" type="button" data-app-section="ratings">
+          <span class="hub-card-icon">⭐</span><span class="hub-card-copy"><strong>ارزیابی بازیکنان</strong><small>ثبت امتیاز برای هم‌تیمی‌های سانس‌های گذشته</small></span><span class="hub-card-arrow">←</span>
+        </button>
+      </div>
+      <div class="hub-next" id="hubNextSession"></div>
+    </section>
+
+    <section class="hub-view content-view" id="reservedView" hidden aria-labelledby="reservedTitle">
+      <div class="panel-head"><span class="eyebrow">برنامهٔ سالن‌ها</span><h1 id="reservedTitle">سالن‌های رزروشده</h1><p>جزئیات سانس‌های برگزارشده و برنامهٔ بازی‌های پیش‌رو.</p></div>
+      <div class="rsvp-tools"><div><strong>نظرسنجی شرکت در سالن</strong><small>برای ثبت پاسخ، با حساب کاربری خود وارد شوید؛ هر حساب برای هر سانس یک پاسخ دارد.</small></div><div class="rsvp-secure-mark">🔐 ورود اعضا</div></div>
+      <div class="reserved-grid" id="reservedGrid"></div>
+    </section>
+
+    <section class="hub-view content-view" id="galleryView" hidden aria-labelledby="galleryTitle">
+      <div class="panel-head"><span class="eyebrow">لحظه‌های بازی</span><h1 id="galleryTitle">آلبوم فیلم و تصاویر</h1><p>تصاویر و ویدئوهای هر سانس، در آلبوم خودش.</p></div>
+      <div id="gallerySessions" class="gallery-sessions"></div>
+    </section>
+
+    <section class="hub-view content-view" id="ratingsView" hidden aria-labelledby="ratingsTitle">
+      <div class="panel-head"><span class="eyebrow">بازخورد هم‌تیمی‌ها</span><h1 id="ratingsTitle">ارزیابی بازیکنان</h1><p>حاضران هر سانس می‌توانند به بازیکنان دیگر امتیاز بدهند. میانگین‌ها رتبهٔ پیشنهادی می‌سازند؛ تغییر رتبه فقط با انتخاب شما انجام می‌شود.</p></div>
+      <div class="rating-notice"><span>ℹ️</span><p>نام ارزیاب باید در فهرست حاضران همان سانس باشد. هر نفر می‌تواند امتیازهایش را دوباره ثبت کند؛ ثبت جدید جایگزین ثبت قبلی او در همان سانس می‌شود.</p></div>
+      <div class="rating-tabs" role="tablist" aria-label="بخش‌های ارزیابی">
+        <button class="rating-tab active" type="button" data-rating-tab="submit">ثبت امتیاز</button>
+        <button class="rating-tab" type="button" data-rating-tab="results">نتایج و رتبه‌ها</button>
+      </div>
+      <div id="ratingSubmitView" class="rating-panel">
+        <div class="rating-setup">
+          <label class="rating-field"><span>سانس موردنظر</span><select id="ratingSession"><option value="1">سانس ۱ · ۱۷ آبان ۱۴۰۵</option><option value="2">سانس ۲ · ۳۰ آبان ۱۴۰۵</option></select></label>
+          <label class="rating-field"><span>حساب شما</span><input id="ratingRaterName" readonly placeholder="ابتدا وارد حساب خود شوید" /></label>
+          <button class="btn auto" type="button" data-rating-load>نمایش افراد سانس</button>
+        </div>
+        <p id="ratingFormMessage" class="rating-form-message" aria-live="polite">سانس را انتخاب کنید و نام خود را وارد کنید.</p>
+        <div id="ratingTargets" class="rating-targets" hidden></div>
+        <div class="rating-submit-row"><span id="ratingSubmitHint" class="hint"></span><button class="btn primary" type="button" data-rating-submit hidden>ثبت امتیازها</button></div>
+      </div>
+      <div id="ratingResultsView" class="rating-panel" hidden>
+        <div class="rating-results-tools"><p id="ratingResultsSummary"></p><div class="admin-only-badge">🔐 فقط مدیر سامانه</div></div>
+        <div class="rating-score-legend">رتبهٔ پیشنهادی براساس میانگین: E از ۱ · D از ۳ · C از ۵ · B از ۷ · A از ۹</div>
+        <div id="ratingResults" class="rating-results"></div>
+        <p class="rating-storage-note">امتیازها در همین مرورگر ذخیره می‌شوند. برای جمع‌کردن رأی‌های دیگران، هر نفر فایل خروجی را برای شما بفرستد و آن را از همین بخش وارد کنید.</p>
+      </div>
+    </section>
+
+    <section class="hub-view content-view" id="newsView" hidden aria-labelledby="newsTitle">
+      <div class="panel-head"><span class="eyebrow">خبرهای تیم</span><h1 id="newsTitle">اخبار و اطلاعیه‌ها</h1><p>اطلاعیه‌های سالن و خبرهای تیم را ثبت کنید تا در نوار زندهٔ اپ نمایش داده شوند.</p></div>
+      <form class="news-compose" id="newsCompose">
+        <label class="news-input"><span>عنوان خبر</span><input id="newsTitleInput" maxlength="70" required placeholder="مثلاً تغییر ساعت سانس" /></label>
+        <label class="news-input"><span>متن اطلاعیه</span><textarea id="newsBodyInput" rows="3" maxlength="240" required placeholder="جزئیات خبر را کوتاه بنویسید…"></textarea></label>
+        <div class="news-compose-footer"><small>خبر پس از ثبت، در نوار زندهٔ کنار صفحه هم نمایش داده می‌شود.</small><button class="btn primary" type="submit">＋ ثبت اطلاعیه</button></div>
+      </form>
+      <div class="news-list-head"><h2>اطلاعیه‌های فعال</h2><span id="newsCount" class="gallery-count"></span></div>
+      <div class="news-list" id="newsList"></div>
+    </section>
+
+    <main class="main" id="teamWorkflow" hidden>
+      <!-- ============ STEP 1 ============ -->
+      <section class="view" id="view-players" aria-labelledby="playersTitle">
+        <div class="panel-head">
+          <span class="eyebrow">مرحله ۱</span>
+          <h1 id="playersTitle">چه کسانی بازی می‌کنند؟</h1>
+          <p>روی هر بازیکن بزنید تا از بازی کنار گذاشته شود. با زدن «آمار»، تصویر کامل انیمه‌ای و نمودار بازیکن را ببینید. رتبه و نقش دروازه‌بان را هم از نوار کارت تغییر دهید.</p>
+        </div>
+
+        <div class="toolbar">
+          <div class="field">
+            <span class="field-label">تعداد تیم‌ها</span>
+            <div class="chips" id="teamCountPicker" role="group" aria-label="تعداد تیم‌ها"></div>
+            <span class="field-note" id="teamCountNote"></span>
+          </div>
+
+          <div class="field">
+            <span class="field-label">انتخاب سریع</span>
+            <div class="chips">
+              <button class="chip chip-ghost" type="button" data-action="select-all">همه</button>
+              <button class="chip chip-ghost" type="button" data-action="select-none">هیچ‌کدام</button>
+            </div>
+          </div>
+
+          <div class="counter">
+            <span id="presentCounter">۰ از ۰ نفر</span>
+            <small>بازیکن حاضر</small>
+          </div>
+        </div>
+
+        <div class="tags-summary" id="tagsSummary" aria-live="polite"></div>
+
+        <div class="people-grid" id="peopleGrid"></div>
+
+        <div class="action-bar">
+          <span class="hint" id="playersHint"></span>
+          <div class="actions">
+            <button class="btn ghost" type="button" id="resetBtn">شروع دوباره</button>
+            <button class="btn auto" type="button" id="autoDraftBtn">⚡ یارکشی خودکار</button>
+            <button class="btn primary" type="button" id="toCaptainsBtn">ادامه: انتخاب کاپیتان‌ها <span aria-hidden="true">←</span></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ STEP 2 ============ -->
+      <section class="view" id="view-captains" aria-labelledby="captainsTitle">
+        <div class="panel-head">
+          <span class="eyebrow">مرحله ۲</span>
+          <h1 id="captainsTitle">کاپیتان هر تیم را انتخاب کنید</h1>
+          <p>برای هر تیم یک نفر را به‌عنوان کاپیتان مشخص کنید؛ یا بگذارید برنامه بر اساس رتبهٔ بازیکنان، کاپیتان‌ها را خودش انتخاب کند.</p>
+        </div>
+
+        <div class="captains-grid" id="captainsGrid"></div>
+
+        <div class="action-bar">
+          <span class="hint" id="captainsHint"></span>
+          <div class="actions">
+            <button class="btn ghost" type="button" data-goto="players">بازگشت</button>
+            <button class="btn auto" type="button" id="autoCaptainsBtn">👑 انتخاب خودکار</button>
+            <button class="btn primary" type="button" id="toBoardBtn">شروع چیدمان <span aria-hidden="true">←</span></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ STEP 3 ============ -->
+      <section class="view" id="view-board" aria-labelledby="boardTitle">
+        <div class="panel-head">
+          <span class="eyebrow">مرحله ۳</span>
+          <h1 id="boardTitle">بازیکنان را بین تیم‌ها بچینید</h1>
+          <p>«چیدمان هوشمند» بر اساس تگ دروازه‌بان و رتبهٔ A تا E، تیم‌های متوازن می‌سازد. بعد از آن می‌توانید کارت‌ها را دستی جابه‌جا کنید.</p>
+        </div>
+
+        <div class="board-wrap">
+          <div class="pool-panel" id="poolZone" data-drop="pool">
+            <div class="pool-head">
+              <div>
+                <h2>بدون تیم <span class="count-badge" id="poolCount">۰</span></h2>
+                <p>برای برگرداندن بازیکن به اینجا هم می‌توانید رهایش کنید.</p>
+              </div>
+              <div class="team-hint" id="boardSummary"></div>
+            </div>
+            <div class="pool" id="pool"></div>
+          </div>
+
+          <div class="teams" id="teamsGrid"></div>
+        </div>
+
+        <div class="action-bar">
+          <span class="hint" id="boardHint"></span>
+          <div class="actions">
+            <button class="btn ghost" type="button" data-goto="players">تنظیمات</button>
+            <button class="btn ghost" type="button" id="copyBtn">کپی ترکیب</button>
+            <button class="btn ghost" type="button" id="clearBtn">پاک‌کردن چیدمان</button>
+            <button class="btn ghost" type="button" id="shuffleBtn">🎲 قرعه‌کشی تصادفی</button>
+            <button class="btn primary" type="button" id="smartBtn">🧠 چیدمان هوشمند</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="auth-modal" id="authModal" hidden role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button class="auth-backdrop" type="button" data-auth-close aria-label="بستن پنجرهٔ ورود"></button>
+    <div class="auth-card">
+      <button class="auth-close" type="button" data-auth-close aria-label="بستن">✕</button>
+      <span class="auth-emblem">🔐</span>
+      <span class="eyebrow">ورود اعضای فوتسال</span>
+      <h2 id="authTitle">حساب کاربری</h2>
+      <p>برای رأی‌دادن و ثبت حضور، با نام کاربری و گذرواژهٔ اختصاصی خود وارد شوید.</p>
+      <form id="loginForm">
+        <label class="auth-field"><span>نام کاربری</span><input id="loginUsername" name="username" autocomplete="username" required /></label>
+        <label class="auth-field"><span>گذرواژه</span><input id="loginPassword" name="password" type="password" autocomplete="current-password" required /></label>
+        <p id="loginMessage" class="login-message" aria-live="polite"></p>
+        <button class="btn primary auth-submit" type="submit">ورود امن</button>
+      </form>
+      <small class="auth-footnote">اطلاعات ورودتان را با دیگران به‌اشتراک نگذارید.</small>
+    </div>
+  </div>
+
+  <aside class="player-profile" id="playerProfile" hidden aria-hidden="true">
+    <div id="playerProfileContent"></div>
+  </aside>
+
+  <div class="anime-lightbox" id="animeLightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="نمایش تمام‌صفحهٔ تصویر انیمه‌ای">
+    <button type="button" class="anime-lightbox-backdrop" data-lightbox-close aria-label="بستن تصویر"></button>
+    <button type="button" class="anime-lightbox-close" id="animeLightboxClose" data-lightbox-close aria-label="بستن تصویر">✕</button>
+    <figure class="anime-lightbox-figure">
+      <img id="animeLightboxImage" alt="" />
+      <figcaption id="animeLightboxCaption"></figcaption>
+    </figure>
+  </div>
+
+  <div class="media-lightbox" id="mediaLightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="نمایش عکس یا ویدئوی سانس">
+    <button type="button" class="media-lightbox-backdrop" data-media-close aria-label="بستن رسانه"></button>
+    <button type="button" class="media-lightbox-close" data-media-close aria-label="بستن">✕</button>
+    <figure class="media-lightbox-figure"><div id="mediaViewerContent"></div><figcaption id="mediaViewerCaption"></figcaption></figure>
+  </div>
+
+  <!-- ============ CAPTAIN PICKER MODAL ============ -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header class="modal-head">
+        <div>
+          <h3 id="modalTitle">انتخاب کاپیتان</h3>
+          <p id="modalSub">یک بازیکن انتخاب کنید</p>
+        </div>
+        <button class="icon-btn" type="button" data-close aria-label="بستن">✕</button>
+      </header>
+      <div class="modal-grid" id="modalGrid"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="players.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
